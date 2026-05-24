@@ -9,6 +9,8 @@ class PlaybackEngine: ObservableObject {
     @Published var speedMultiplier: Double = 1.0 // 1.0 = base speed
     @Published var countdown: Int = 0
     
+    var eventMonitor: Any? // Store the NSEvent local monitor
+    
     private var displayLink: CVDisplayLink?
     private var lastFrameTime: CFTimeInterval = 0
     private var countdownTimer: Timer?

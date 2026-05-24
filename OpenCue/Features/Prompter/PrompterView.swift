@@ -96,20 +96,36 @@ struct PrompterView: View {
             }
         }
         .onAppear {
-            NSEvent.addLocalMonitorForEvents(matching: .keyDown) { event in
+            engine.eventMonitor = NSEvent.addLocalMonitorForEvents(matching: [.keyDown, .scrollWheel]) { event in
+                if event.type == .scrollWheel {
+                    // Use the mouse wheel to adjust speed
+                    let delta = event.scrollingDeltaY
+                    if abs(delta) > 0 {
+                        engine.speedMultiplier = min(5.0, max(0.1, engine.speedMultiplier + (Double(delta) * 0.02)))
+                    }
+                    // Return nil to swallow the event so the window doesn't actually scroll
+                    return engine.isPlaying ? nil : event
+                }
+                
                 switch event.keyCode {
                 case 49: // Space
                     engine.togglePlayPause()
                     return nil
                 case 126: // Up Arrow
-                    engine.speedMultiplier = min(2.5, engine.speedMultiplier + 0.1)
+                    engine.speedMultiplier = min(5.0, engine.speedMultiplier + 0.1)
                     return nil
                 case 125: // Down Arrow
-                    engine.speedMultiplier = max(0.5, engine.speedMultiplier - 0.1)
+                    engine.speedMultiplier = max(0.1, engine.speedMultiplier - 0.1)
                     return nil
                 default:
                     return event
                 }
+            }
+        }
+        .onDisappear {
+            if let monitor = engine.eventMonitor {
+                NSEvent.removeMonitor(monitor)
+                engine.eventMonitor = nil
             }
         }
         // Support for mirroring
