@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		076E33D78DE683DF597B2080 /* CueStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60C769268B888869FD9AA8F /* CueStorageTests.swift */; };
 		12626AF29CE0EDA00C996284 /* ScriptEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DED68C1B6F53D20B77A013 /* ScriptEditorView.swift */; };
 		268C3C421F728D27791E61BE /* ScriptLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD66A5A849B30ED07DEEF83 /* ScriptLibraryView.swift */; };
 		35D3CEFA79B4065A8C31C53A /* FloatingWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203F46C95651449ED846C473 /* FloatingWindowController.swift */; };
@@ -16,11 +17,24 @@
 		76BB0AE5FB5E05837BDC1940 /* ScriptIOController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2F61BAA6CD816016B9CC1B /* ScriptIOController.swift */; };
 		79E492DA2B416EFF008DCFC8 /* DisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0236CEB68975D2FB17031C4D /* DisplayManager.swift */; };
 		A06361EB54DBEE99933ABD1B /* ScriptDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379E7FBD6253AD80E20F3D86 /* ScriptDocument.swift */; };
+		A2AA4C9C770C75FB6903DB69 /* ScriptDocumentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90BA5A2BF09100B282396E /* ScriptDocumentTests.swift */; };
+		A3F8E856BCF426BB81E3049A /* ColorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11829A42B3A39FEDD53A2F /* ColorExtensionTests.swift */; };
 		B93CE593181EF5F3AA08EB62 /* ExternalWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBE6F0F54910BFEF6457E9D /* ExternalWindowController.swift */; };
 		C5B72C16BCEF96092F93F110 /* OpenCueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65398CA5C5D6BE708497B68 /* OpenCueApp.swift */; };
 		E48B92E475BA91CF53B2D817 /* PrompterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4260ECD9AD0C414B6F2920D /* PrompterView.swift */; };
+		E7A66A184316C93A46B222D9 /* PlaybackEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C166872DCF7B30A24488D949 /* PlaybackEngineTests.swift */; };
 		F686BFC89592C636C645283F /* OperatorControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4CD7196889899F19F5DC16 /* OperatorControlsView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C890472CCDFDCD1755BED3EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 64DE4F1CE809025AF65F8500 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7CC97EA5599EE99B614CC00E;
+			remoteInfo = OpenCue;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0236CEB68975D2FB17031C4D /* DisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayManager.swift; sourceTree = "<group>"; };
@@ -29,13 +43,18 @@
 		203F46C95651449ED846C473 /* FloatingWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingWindowController.swift; sourceTree = "<group>"; };
 		3198A2BF122B6D4671AB167A /* CueStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueStorage.swift; sourceTree = "<group>"; };
 		379E7FBD6253AD80E20F3D86 /* ScriptDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptDocument.swift; sourceTree = "<group>"; };
+		4A90BA5A2BF09100B282396E /* ScriptDocumentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptDocumentTests.swift; sourceTree = "<group>"; };
 		6A2F61BAA6CD816016B9CC1B /* ScriptIOController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptIOController.swift; sourceTree = "<group>"; };
+		7D11829A42B3A39FEDD53A2F /* ColorExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensionTests.swift; sourceTree = "<group>"; };
 		967BD79343A63EF19B572ABE /* PromptSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptSettingsView.swift; sourceTree = "<group>"; };
+		9A13A101EEDFD3C4A8D4D3A8 /* OpenCueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenCueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4260ECD9AD0C414B6F2920D /* PrompterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrompterView.swift; sourceTree = "<group>"; };
 		BF8EDCB8616963343F48ADD5 /* OpenCue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCue.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C166872DCF7B30A24488D949 /* PlaybackEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackEngineTests.swift; sourceTree = "<group>"; };
 		DFD66A5A849B30ED07DEEF83 /* ScriptLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptLibraryView.swift; sourceTree = "<group>"; };
 		E0DED68C1B6F53D20B77A013 /* ScriptEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptEditorView.swift; sourceTree = "<group>"; };
 		E65398CA5C5D6BE708497B68 /* OpenCueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenCueApp.swift; sourceTree = "<group>"; };
+		F60C769268B888869FD9AA8F /* CueStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueStorageTests.swift; sourceTree = "<group>"; };
 		FFBE6F0F54910BFEF6457E9D /* ExternalWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalWindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -44,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				4B49A554F75B9F7B568BD421 /* OpenCue */,
+				0A63BCBB65748D18E33639AD /* OpenCueTests */,
 				72265DAFFC5AEE4372E38089 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +75,17 @@
 				A4260ECD9AD0C414B6F2920D /* PrompterView.swift */,
 			);
 			path = Prompter;
+			sourceTree = "<group>";
+		};
+		0A63BCBB65748D18E33639AD /* OpenCueTests */ = {
+			isa = PBXGroup;
+			children = (
+				7D11829A42B3A39FEDD53A2F /* ColorExtensionTests.swift */,
+				F60C769268B888869FD9AA8F /* CueStorageTests.swift */,
+				C166872DCF7B30A24488D949 /* PlaybackEngineTests.swift */,
+				4A90BA5A2BF09100B282396E /* ScriptDocumentTests.swift */,
+			);
+			path = OpenCueTests;
 			sourceTree = "<group>";
 		};
 		1F7A5A1771DD1916E0E4467D /* App */ = {
@@ -123,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				BF8EDCB8616963343F48ADD5 /* OpenCue.app */,
+				9A13A101EEDFD3C4A8D4D3A8 /* OpenCueTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -191,6 +223,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		58797CF60FCC266A2F534259 /* OpenCueTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8AB2ED5FDD77D971BA807A7 /* Build configuration list for PBXNativeTarget "OpenCueTests" */;
+			buildPhases = (
+				EF817588DAF0B83F74DE9197 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				828C30E357398B79B92EB2C2 /* PBXTargetDependency */,
+			);
+			name = OpenCueTests;
+			packageProductDependencies = (
+			);
+			productName = OpenCueTests;
+			productReference = 9A13A101EEDFD3C4A8D4D3A8 /* OpenCueTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		7CC97EA5599EE99B614CC00E /* OpenCue */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE9C56770EC9C83D88FFC86A /* Build configuration list for PBXNativeTarget "OpenCue" */;
@@ -237,6 +287,7 @@
 			projectRoot = "";
 			targets = (
 				7CC97EA5599EE99B614CC00E /* OpenCue */,
+				58797CF60FCC266A2F534259 /* OpenCueTests */,
 			);
 		};
 /* End PBXProject section */
@@ -262,7 +313,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EF817588DAF0B83F74DE9197 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3F8E856BCF426BB81E3049A /* ColorExtensionTests.swift in Sources */,
+				076E33D78DE683DF597B2080 /* CueStorageTests.swift in Sources */,
+				E7A66A184316C93A46B222D9 /* PlaybackEngineTests.swift in Sources */,
+				A2AA4C9C770C75FB6903DB69 /* ScriptDocumentTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		828C30E357398B79B92EB2C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7CC97EA5599EE99B614CC00E /* OpenCue */;
+			targetProxy = C890472CCDFDCD1755BED3EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0ADF0ED04F34999BE8AD12F0 /* Debug */ = {
@@ -403,6 +473,24 @@
 			};
 			name = Release;
 		};
+		6C19AC3F4E7DC521F3EFF964 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.opencue.OpenCueTests;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenCue.app/Contents/MacOS/OpenCue";
+			};
+			name = Debug;
+		};
 		8197E8BA78764A043C733307 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -422,6 +510,24 @@
 			};
 			name = Debug;
 		};
+		C0BDAE1EC99F280EEDB7D713 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.opencue.OpenCueTests;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenCue.app/Contents/MacOS/OpenCue";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -439,6 +545,15 @@
 			buildConfigurations = (
 				8197E8BA78764A043C733307 /* Debug */,
 				263FA9889A9ABDE1EAC3EC30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F8AB2ED5FDD77D971BA807A7 /* Build configuration list for PBXNativeTarget "OpenCueTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C19AC3F4E7DC521F3EFF964 /* Debug */,
+				C0BDAE1EC99F280EEDB7D713 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

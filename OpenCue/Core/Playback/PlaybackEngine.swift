@@ -72,11 +72,11 @@ class PlaybackEngine: ObservableObject {
     }
     
     func pause() {
+        countdownTimer?.invalidate()
+        countdown = 0
         guard let link = displayLink, isPlaying else { return }
         CVDisplayLinkStop(link)
         isPlaying = false
-        countdownTimer?.invalidate()
-        countdown = 0
     }
     
     func togglePlayPause() {
@@ -97,7 +97,7 @@ class PlaybackEngine: ObservableObject {
         play()
     }
     
-    private func update() {
+    func update() {
         guard isPlaying else { return }
         
         let currentTime = CACurrentMediaTime()

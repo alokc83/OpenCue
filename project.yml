@@ -17,3 +17,14 @@ targets:
         CODE_SIGN_STYLE: Automatic
         CODE_SIGN_IDENTITY: "-" # Ad-hoc sign for local build
         GENERATE_INFOPLIST_FILE: YES
+  OpenCueTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: OpenCueTests
+    dependencies:
+      - target: OpenCue
+    settings:
+      base:
+        SWIFT_VERSION: 5.0
+        GENERATE_INFOPLIST_FILE: YES

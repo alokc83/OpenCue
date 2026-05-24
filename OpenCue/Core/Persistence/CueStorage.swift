@@ -7,12 +7,15 @@ class CueStorage: ObservableObject {
     
     private let fileManager = FileManager.default
     private let scriptsDirectoryName = "Scripts"
-    
-    init() {
+    private let overrideDirectory: URL?
+
+    init(directory: URL? = nil) {
+        self.overrideDirectory = directory
         loadScripts()
     }
-    
+
     private var documentDirectory: URL? {
+        if let dir = overrideDirectory { return dir }
         guard let appSupport = fileManager.urls(for: .applicationSupportDirectory, in: .userDomainMask).first else { return nil }
         let bundleID = Bundle.main.bundleIdentifier ?? "com.opencue.mac"
         let appDir = appSupport.appendingPathComponent(bundleID)
