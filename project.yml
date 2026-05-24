@@ -18,7 +18,7 @@ targets:
         DEVELOPMENT_TEAM: 55A5VSLH99
         ENABLE_HARDENED_RUNTIME: YES
         MARKETING_VERSION: 1.0.0
-        CURRENT_PROJECT_VERSION: 3
+        CURRENT_PROJECT_VERSION: 4
         INFOPLIST_KEY_NSHumanReadableCopyright: 'Copyright © 2026 Mt. Aden LLC. All rights reserved.'
         GENERATE_INFOPLIST_FILE: YES
   OpenCueTests:
