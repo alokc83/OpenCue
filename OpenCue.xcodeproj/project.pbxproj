@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12626AF29CE0EDA00C996284 /* ScriptEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DED68C1B6F53D20B77A013 /* ScriptEditorView.swift */; };
+		268C3C421F728D27791E61BE /* ScriptLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD66A5A849B30ED07DEEF83 /* ScriptLibraryView.swift */; };
+		35D3CEFA79B4065A8C31C53A /* FloatingWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203F46C95651449ED846C473 /* FloatingWindowController.swift */; };
+		4157DF882917022E721A7BAA /* PlaybackEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BAEE6CDB763871FD497688 /* PlaybackEngine.swift */; };
+		623C68CCBEDDE1CF0D6BF085 /* CueStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3198A2BF122B6D4671AB167A /* CueStorage.swift */; };
+		79E492DA2B416EFF008DCFC8 /* DisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0236CEB68975D2FB17031C4D /* DisplayManager.swift */; };
+		A06361EB54DBEE99933ABD1B /* ScriptDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379E7FBD6253AD80E20F3D86 /* ScriptDocument.swift */; };
+		B93CE593181EF5F3AA08EB62 /* ExternalWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBE6F0F54910BFEF6457E9D /* ExternalWindowController.swift */; };
+		C5B72C16BCEF96092F93F110 /* OpenCueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65398CA5C5D6BE708497B68 /* OpenCueApp.swift */; };
+		E48B92E475BA91CF53B2D817 /* PrompterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4260ECD9AD0C414B6F2920D /* PrompterView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0236CEB68975D2FB17031C4D /* DisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayManager.swift; sourceTree = "<group>"; };
+		08BAEE6CDB763871FD497688 /* PlaybackEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackEngine.swift; sourceTree = "<group>"; };
+		203F46C95651449ED846C473 /* FloatingWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingWindowController.swift; sourceTree = "<group>"; };
+		3198A2BF122B6D4671AB167A /* CueStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueStorage.swift; sourceTree = "<group>"; };
+		379E7FBD6253AD80E20F3D86 /* ScriptDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptDocument.swift; sourceTree = "<group>"; };
+		A4260ECD9AD0C414B6F2920D /* PrompterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrompterView.swift; sourceTree = "<group>"; };
+		BF8EDCB8616963343F48ADD5 /* OpenCue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCue.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFD66A5A849B30ED07DEEF83 /* ScriptLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptLibraryView.swift; sourceTree = "<group>"; };
+		E0DED68C1B6F53D20B77A013 /* ScriptEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptEditorView.swift; sourceTree = "<group>"; };
+		E65398CA5C5D6BE708497B68 /* OpenCueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenCueApp.swift; sourceTree = "<group>"; };
+		FFBE6F0F54910BFEF6457E9D /* ExternalWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalWindowController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		03A77550DE70A1519C75999C = {
+			isa = PBXGroup;
+			children = (
+				4B49A554F75B9F7B568BD421 /* OpenCue */,
+				72265DAFFC5AEE4372E38089 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		05BCF8CAF8F757198030A1DE /* Prompter */ = {
+			isa = PBXGroup;
+			children = (
+				A4260ECD9AD0C414B6F2920D /* PrompterView.swift */,
+			);
+			path = Prompter;
+			sourceTree = "<group>";
+		};
+		1F7A5A1771DD1916E0E4467D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E65398CA5C5D6BE708497B68 /* OpenCueApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		29EFFB8C82908A803B3811B0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				6CC21AB1C992C25AE583DC2C /* Models */,
+				36A8BF8700164DD598612BFA /* Persistence */,
+				92986F9530946AC6DE0EF66A /* Playback */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		36A8BF8700164DD598612BFA /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				3198A2BF122B6D4671AB167A /* CueStorage.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		41E6866FA5E61C30DBE1E653 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				DFD66A5A849B30ED07DEEF83 /* ScriptLibraryView.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		4B49A554F75B9F7B568BD421 /* OpenCue */ = {
+			isa = PBXGroup;
+			children = (
+				1F7A5A1771DD1916E0E4467D /* App */,
+				29EFFB8C82908A803B3811B0 /* Core */,
+				833CB7FC4078AFC7D1E6B5E5 /* Features */,
+				88B9D061DF4712667AC097C2 /* Platform */,
+			);
+			path = OpenCue;
+			sourceTree = "<group>";
+		};
+		6CC21AB1C992C25AE583DC2C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				379E7FBD6253AD80E20F3D86 /* ScriptDocument.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		72265DAFFC5AEE4372E38089 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF8EDCB8616963343F48ADD5 /* OpenCue.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		833CB7FC4078AFC7D1E6B5E5 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F90F252637FE674AA7AD1BF5 /* Editor */,
+				41E6866FA5E61C30DBE1E653 /* Library */,
+				05BCF8CAF8F757198030A1DE /* Prompter */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		88B9D061DF4712667AC097C2 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				D5150B979111A89DDC25C771 /* Displays */,
+				D669B7DF0B1CB47B3143E3B8 /* Windows */,
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		92986F9530946AC6DE0EF66A /* Playback */ = {
+			isa = PBXGroup;
+			children = (
+				08BAEE6CDB763871FD497688 /* PlaybackEngine.swift */,
+			);
+			path = Playback;
+			sourceTree = "<group>";
+		};
+		D5150B979111A89DDC25C771 /* Displays */ = {
+			isa = PBXGroup;
+			children = (
+				0236CEB68975D2FB17031C4D /* DisplayManager.swift */,
+			);
+			path = Displays;
+			sourceTree = "<group>";
+		};
+		D669B7DF0B1CB47B3143E3B8 /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				FFBE6F0F54910BFEF6457E9D /* ExternalWindowController.swift */,
+				203F46C95651449ED846C473 /* FloatingWindowController.swift */,
+			);
+			path = Windows;
+			sourceTree = "<group>";
+		};
+		F90F252637FE674AA7AD1BF5 /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				E0DED68C1B6F53D20B77A013 /* ScriptEditorView.swift */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7CC97EA5599EE99B614CC00E /* OpenCue */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE9C56770EC9C83D88FFC86A /* Build configuration list for PBXNativeTarget "OpenCue" */;
+			buildPhases = (
+				67300F7FD86B0876F776446D /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenCue;
+			packageProductDependencies = (
+			);
+			productName = OpenCue;
+			productReference = BF8EDCB8616963343F48ADD5 /* OpenCue.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		64DE4F1CE809025AF65F8500 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					7CC97EA5599EE99B614CC00E = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A314464DB18EE9E796EF5365 /* Build configuration list for PBXProject "OpenCue" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 03A77550DE70A1519C75999C;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 72265DAFFC5AEE4372E38089 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7CC97EA5599EE99B614CC00E /* OpenCue */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67300F7FD86B0876F776446D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				623C68CCBEDDE1CF0D6BF085 /* CueStorage.swift in Sources */,
+				79E492DA2B416EFF008DCFC8 /* DisplayManager.swift in Sources */,
+				B93CE593181EF5F3AA08EB62 /* ExternalWindowController.swift in Sources */,
+				35D3CEFA79B4065A8C31C53A /* FloatingWindowController.swift in Sources */,
+				C5B72C16BCEF96092F93F110 /* OpenCueApp.swift in Sources */,
+				4157DF882917022E721A7BAA /* PlaybackEngine.swift in Sources */,
+				E48B92E475BA91CF53B2D817 /* PrompterView.swift in Sources */,
+				A06361EB54DBEE99933ABD1B /* ScriptDocument.swift in Sources */,
+				12626AF29CE0EDA00C996284 /* ScriptEditorView.swift in Sources */,
+				268C3C421F728D27791E61BE /* ScriptLibraryView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0ADF0ED04F34999BE8AD12F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		192EAE124CEE86E4CA729541 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		263FA9889A9ABDE1EAC3EC30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.opencue.OpenCue;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		8197E8BA78764A043C733307 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.opencue.OpenCue;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A314464DB18EE9E796EF5365 /* Build configuration list for PBXProject "OpenCue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ADF0ED04F34999BE8AD12F0 /* Debug */,
+				192EAE124CEE86E4CA729541 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EE9C56770EC9C83D88FFC86A /* Build configuration list for PBXNativeTarget "OpenCue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8197E8BA78764A043C733307 /* Debug */,
+				263FA9889A9ABDE1EAC3EC30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 64DE4F1CE809025AF65F8500 /* Project object */;
+}

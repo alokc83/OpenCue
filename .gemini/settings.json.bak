@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "code-review-graph": {
+      "command": "uvx",
+      "args": [
+        "code-review-graph",
+        "serve"
+      ],
+      "cwd": "/Users/alok/Documents/000_worth_knowing/Code/OpenCue"
+    }
+  }
+}
