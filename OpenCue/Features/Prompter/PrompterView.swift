@@ -1,12 +1,12 @@
 import SwiftUI
 
 struct PrompterView: View {
-    @StateObject var engine: PlaybackEngine
+    @ObservedObject var engine: PlaybackEngine
     
     @State private var showControls: Bool = true
     
-    init(script: ScriptDocument) {
-        _engine = StateObject(wrappedValue: PlaybackEngine(script: script))
+    init(engine: PlaybackEngine) {
+        self.engine = engine
     }
     
     var body: some View {
@@ -47,6 +47,12 @@ struct PrompterView: View {
                 VStack {
                     Spacer()
                     HStack {
+                        Button(action: { engine.restart() }) {
+                            Image(systemName: "arrow.counterclockwise")
+                        }
+                        .buttonStyle(.plain)
+                        .padding()
+                        
                         Button(action: { engine.rewind() }) {
                             Image(systemName: "backward.end.fill")
                         }
@@ -54,7 +60,7 @@ struct PrompterView: View {
                         .padding()
                         
                         Button(action: { engine.togglePlayPause() }) {
-                            Image(systemName: engine.isPlaying ? "pause.circle.fill" : "play.circle.fill")
+                            Image(systemName: engine.isPlaying || engine.countdown > 0 ? "pause.circle.fill" : "play.circle.fill")
                                 .resizable()
                                 .frame(width: 44, height: 44)
                         }
@@ -75,10 +81,18 @@ struct PrompterView: View {
                     .padding(.bottom, 20)
                 }
             }
+            
+            // Countdown overlay
+            if engine.countdown > 0 {
+                Text("\(engine.countdown)")
+                    .font(.system(size: 150, weight: .bold, design: .rounded))
+                    .foregroundColor(Color(hex: engine.script.settings.textColorHex).opacity(0.8))
+                    .transition(.scale)
+            }
         }
         .onHover { isHovering in
             withAnimation {
-                showControls = isHovering || !engine.isPlaying
+                showControls = isHovering || (!engine.isPlaying && engine.countdown == 0)
             }
         }
         .onAppear {

@@ -1,12 +1,13 @@
 import AppKit
 import SwiftUI
 
+@MainActor
 class ExternalWindowController: NSObject, NSWindowDelegate {
     static let shared = ExternalWindowController()
     
     private var windows: [UUID: NSWindow] = [:]
     
-    func showPrompter(for script: ScriptDocument, on screen: NSScreen) {
+    func showPrompter(with engine: PlaybackEngine, on screen: NSScreen) {
         let windowID = UUID()
         
         let window = NSWindow(
@@ -22,7 +23,7 @@ class ExternalWindowController: NSObject, NSWindowDelegate {
         window.backgroundColor = .black
         window.collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary]
         
-        let prompterView = PrompterView(script: script)
+        let prompterView = PrompterView(engine: engine)
         window.contentView = NSHostingView(rootView: prompterView)
         
         window.setFrame(screen.frame, display: true)
@@ -31,5 +32,12 @@ class ExternalWindowController: NSObject, NSWindowDelegate {
         window.toggleFullScreen(nil)
         
         windows[windowID] = window
+    }
+    
+    func closeAll() {
+        for window in windows.values {
+            window.close()
+        }
+        windows.removeAll()
     }
 }

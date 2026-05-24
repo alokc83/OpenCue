@@ -1,6 +1,7 @@
 import AppKit
 import SwiftUI
 
+@MainActor
 class FloatingWindowController: NSObject, NSWindowDelegate {
     static let shared = FloatingWindowController()
     
@@ -32,7 +33,8 @@ class FloatingWindowController: NSObject, NSWindowDelegate {
             self.window = panel
         }
         
-        let prompterView = PrompterView(script: script)
+        let engine = PlaybackEngine(script: script)
+        let prompterView = PrompterView(engine: engine)
         window?.contentView = NSHostingView(rootView: prompterView)
         
         window?.center()

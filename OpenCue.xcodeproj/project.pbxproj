@@ -11,20 +11,26 @@
 		268C3C421F728D27791E61BE /* ScriptLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD66A5A849B30ED07DEEF83 /* ScriptLibraryView.swift */; };
 		35D3CEFA79B4065A8C31C53A /* FloatingWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203F46C95651449ED846C473 /* FloatingWindowController.swift */; };
 		4157DF882917022E721A7BAA /* PlaybackEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BAEE6CDB763871FD497688 /* PlaybackEngine.swift */; };
+		6227FD35F49CB979D1C0DC34 /* PromptSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967BD79343A63EF19B572ABE /* PromptSettingsView.swift */; };
 		623C68CCBEDDE1CF0D6BF085 /* CueStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3198A2BF122B6D4671AB167A /* CueStorage.swift */; };
+		76BB0AE5FB5E05837BDC1940 /* ScriptIOController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2F61BAA6CD816016B9CC1B /* ScriptIOController.swift */; };
 		79E492DA2B416EFF008DCFC8 /* DisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0236CEB68975D2FB17031C4D /* DisplayManager.swift */; };
 		A06361EB54DBEE99933ABD1B /* ScriptDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379E7FBD6253AD80E20F3D86 /* ScriptDocument.swift */; };
 		B93CE593181EF5F3AA08EB62 /* ExternalWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBE6F0F54910BFEF6457E9D /* ExternalWindowController.swift */; };
 		C5B72C16BCEF96092F93F110 /* OpenCueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65398CA5C5D6BE708497B68 /* OpenCueApp.swift */; };
 		E48B92E475BA91CF53B2D817 /* PrompterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4260ECD9AD0C414B6F2920D /* PrompterView.swift */; };
+		F686BFC89592C636C645283F /* OperatorControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4CD7196889899F19F5DC16 /* OperatorControlsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0236CEB68975D2FB17031C4D /* DisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayManager.swift; sourceTree = "<group>"; };
 		08BAEE6CDB763871FD497688 /* PlaybackEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackEngine.swift; sourceTree = "<group>"; };
+		1F4CD7196889899F19F5DC16 /* OperatorControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorControlsView.swift; sourceTree = "<group>"; };
 		203F46C95651449ED846C473 /* FloatingWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingWindowController.swift; sourceTree = "<group>"; };
 		3198A2BF122B6D4671AB167A /* CueStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueStorage.swift; sourceTree = "<group>"; };
 		379E7FBD6253AD80E20F3D86 /* ScriptDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptDocument.swift; sourceTree = "<group>"; };
+		6A2F61BAA6CD816016B9CC1B /* ScriptIOController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptIOController.swift; sourceTree = "<group>"; };
+		967BD79343A63EF19B572ABE /* PromptSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptSettingsView.swift; sourceTree = "<group>"; };
 		A4260ECD9AD0C414B6F2920D /* PrompterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrompterView.swift; sourceTree = "<group>"; };
 		BF8EDCB8616963343F48ADD5 /* OpenCue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFD66A5A849B30ED07DEEF83 /* ScriptLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptLibraryView.swift; sourceTree = "<group>"; };
@@ -45,6 +51,7 @@
 		05BCF8CAF8F757198030A1DE /* Prompter */ = {
 			isa = PBXGroup;
 			children = (
+				1F4CD7196889899F19F5DC16 /* OperatorControlsView.swift */,
 				A4260ECD9AD0C414B6F2920D /* PrompterView.swift */,
 			);
 			path = Prompter;
@@ -61,6 +68,7 @@
 		29EFFB8C82908A803B3811B0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				CBD5C7EE9C0DE8D269BC133A /* ImportExport */,
 				6CC21AB1C992C25AE583DC2C /* Models */,
 				36A8BF8700164DD598612BFA /* Persistence */,
 				92986F9530946AC6DE0EF66A /* Playback */,
@@ -95,6 +103,14 @@
 			path = OpenCue;
 			sourceTree = "<group>";
 		};
+		4D378127147E9C929322BD7B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				967BD79343A63EF19B572ABE /* PromptSettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		6CC21AB1C992C25AE583DC2C /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +133,7 @@
 				F90F252637FE674AA7AD1BF5 /* Editor */,
 				41E6866FA5E61C30DBE1E653 /* Library */,
 				05BCF8CAF8F757198030A1DE /* Prompter */,
+				4D378127147E9C929322BD7B /* Settings */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -136,6 +153,14 @@
 				08BAEE6CDB763871FD497688 /* PlaybackEngine.swift */,
 			);
 			path = Playback;
+			sourceTree = "<group>";
+		};
+		CBD5C7EE9C0DE8D269BC133A /* ImportExport */ = {
+			isa = PBXGroup;
+			children = (
+				6A2F61BAA6CD816016B9CC1B /* ScriptIOController.swift */,
+			);
+			path = ImportExport;
 			sourceTree = "<group>";
 		};
 		D5150B979111A89DDC25C771 /* Displays */ = {
@@ -226,10 +251,13 @@
 				B93CE593181EF5F3AA08EB62 /* ExternalWindowController.swift in Sources */,
 				35D3CEFA79B4065A8C31C53A /* FloatingWindowController.swift in Sources */,
 				C5B72C16BCEF96092F93F110 /* OpenCueApp.swift in Sources */,
+				F686BFC89592C636C645283F /* OperatorControlsView.swift in Sources */,
 				4157DF882917022E721A7BAA /* PlaybackEngine.swift in Sources */,
+				6227FD35F49CB979D1C0DC34 /* PromptSettingsView.swift in Sources */,
 				E48B92E475BA91CF53B2D817 /* PrompterView.swift in Sources */,
 				A06361EB54DBEE99933ABD1B /* ScriptDocument.swift in Sources */,
 				12626AF29CE0EDA00C996284 /* ScriptEditorView.swift in Sources */,
+				76BB0AE5FB5E05837BDC1940 /* ScriptIOController.swift in Sources */,
 				268C3C421F728D27791E61BE /* ScriptLibraryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

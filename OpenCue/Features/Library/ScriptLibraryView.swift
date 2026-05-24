@@ -18,6 +18,20 @@ struct ScriptLibraryView: View {
                         }
                     }
                     .contextMenu {
+                        Button(action: {
+                            duplicateScript(script)
+                        }) {
+                            Label("Duplicate", systemImage: "doc.on.doc")
+                        }
+                        
+                        Button(action: {
+                            ScriptIOController.exportScript(script) { _ in }
+                        }) {
+                            Label("Export...", systemImage: "square.and.arrow.up")
+                        }
+                        
+                        Divider()
+                        
                         Button(role: .destructive) {
                             storage.deleteScript(script)
                             if selectedScriptID == script.id {
@@ -32,8 +46,13 @@ struct ScriptLibraryView: View {
             .navigationTitle("Scripts")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
-                    Button(action: createNewScript) {
-                        Label("New Script", systemImage: "plus")
+                    HStack {
+                        Button(action: importScript) {
+                            Label("Import", systemImage: "square.and.arrow.down")
+                        }
+                        Button(action: createNewScript) {
+                            Label("New Script", systemImage: "plus")
+                        }
                     }
                 }
             }
@@ -52,5 +71,23 @@ struct ScriptLibraryView: View {
         let newScript = ScriptDocument(title: "New Script \(storage.scripts.count + 1)")
         storage.saveScript(newScript)
         selectedScriptID = newScript.id
+    }
+    
+    private func duplicateScript(_ script: ScriptDocument) {
+        var newScript = script
+        newScript.id = UUID()
+        newScript.title = script.title + " (Copy)"
+        newScript.createdAt = Date()
+        newScript.updatedAt = Date()
+        storage.saveScript(newScript)
+        selectedScriptID = newScript.id
+    }
+    
+    private func importScript() {
+        ScriptIOController.importScript { importedScript in
+            guard let importedScript = importedScript else { return }
+            storage.saveScript(importedScript)
+            selectedScriptID = importedScript.id
+        }
     }
 }
