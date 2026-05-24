@@ -7,7 +7,10 @@
       "mcp__code-review-graph__get_hub_nodes_tool",
       "mcp__code-review-graph__get_bridge_nodes_tool",
       "mcp__code-review-graph__get_knowledge_gaps_tool",
-      "mcp__code-review-graph__get_surprising_connections_tool"
+      "mcp__code-review-graph__get_surprising_connections_tool",
+      "Bash(xcodegen generate *)",
+      "Bash(xcodebuild *)",
+      "Bash(git *)"
     ]
   }
 }

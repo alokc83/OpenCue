@@ -36,7 +36,7 @@ struct OperatorControlsView: View {
             
             VStack {
                 Text("Speed Multiplier: \(String(format: "%.1fx", engine.speedMultiplier))")
-                Slider(value: $engine.speedMultiplier, in: 0.5...2.5, step: 0.1)
+                Slider(value: $engine.speedMultiplier, in: 0.1...5.0, step: 0.1)
                     .frame(width: 200)
             }
             

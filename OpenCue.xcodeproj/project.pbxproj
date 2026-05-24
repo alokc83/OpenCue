@@ -9,9 +9,12 @@
 /* Begin PBXBuildFile section */
 		076E33D78DE683DF597B2080 /* CueStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60C769268B888869FD9AA8F /* CueStorageTests.swift */; };
 		12626AF29CE0EDA00C996284 /* ScriptEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DED68C1B6F53D20B77A013 /* ScriptEditorView.swift */; };
+		1EE10C87FB514BEDCC618071 /* DisplayManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C92471B5D26BC2362DD5556 /* DisplayManagerTests.swift */; };
 		268C3C421F728D27791E61BE /* ScriptLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD66A5A849B30ED07DEEF83 /* ScriptLibraryView.swift */; };
 		35D3CEFA79B4065A8C31C53A /* FloatingWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203F46C95651449ED846C473 /* FloatingWindowController.swift */; };
+		403EC3FC3B95E822AFF7ED06 /* FloatingWindowControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF02CB1BD0E8567B3D93CFA /* FloatingWindowControllerTests.swift */; };
 		4157DF882917022E721A7BAA /* PlaybackEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BAEE6CDB763871FD497688 /* PlaybackEngine.swift */; };
+		58A9A847DABDF6DA28EB4EEF /* ExternalWindowControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3C5973DE86C418A7C99977 /* ExternalWindowControllerTests.swift */; };
 		6227FD35F49CB979D1C0DC34 /* PromptSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967BD79343A63EF19B572ABE /* PromptSettingsView.swift */; };
 		623C68CCBEDDE1CF0D6BF085 /* CueStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3198A2BF122B6D4671AB167A /* CueStorage.swift */; };
 		76BB0AE5FB5E05837BDC1940 /* ScriptIOController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2F61BAA6CD816016B9CC1B /* ScriptIOController.swift */; };
@@ -21,6 +24,7 @@
 		A3F8E856BCF426BB81E3049A /* ColorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11829A42B3A39FEDD53A2F /* ColorExtensionTests.swift */; };
 		B93CE593181EF5F3AA08EB62 /* ExternalWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBE6F0F54910BFEF6457E9D /* ExternalWindowController.swift */; };
 		C5B72C16BCEF96092F93F110 /* OpenCueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65398CA5C5D6BE708497B68 /* OpenCueApp.swift */; };
+		DF96121BB929BE9CAD2945FA /* ScriptIOControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA41E2FEEFCEBAE25388A889 /* ScriptIOControllerTests.swift */; };
 		E48B92E475BA91CF53B2D817 /* PrompterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4260ECD9AD0C414B6F2920D /* PrompterView.swift */; };
 		E7A66A184316C93A46B222D9 /* PlaybackEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C166872DCF7B30A24488D949 /* PlaybackEngineTests.swift */; };
 		F686BFC89592C636C645283F /* OperatorControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4CD7196889899F19F5DC16 /* OperatorControlsView.swift */; };
@@ -39,18 +43,22 @@
 /* Begin PBXFileReference section */
 		0236CEB68975D2FB17031C4D /* DisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayManager.swift; sourceTree = "<group>"; };
 		08BAEE6CDB763871FD497688 /* PlaybackEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackEngine.swift; sourceTree = "<group>"; };
+		1BF02CB1BD0E8567B3D93CFA /* FloatingWindowControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingWindowControllerTests.swift; sourceTree = "<group>"; };
 		1F4CD7196889899F19F5DC16 /* OperatorControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorControlsView.swift; sourceTree = "<group>"; };
 		203F46C95651449ED846C473 /* FloatingWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingWindowController.swift; sourceTree = "<group>"; };
 		3198A2BF122B6D4671AB167A /* CueStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueStorage.swift; sourceTree = "<group>"; };
 		379E7FBD6253AD80E20F3D86 /* ScriptDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptDocument.swift; sourceTree = "<group>"; };
+		4A3C5973DE86C418A7C99977 /* ExternalWindowControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalWindowControllerTests.swift; sourceTree = "<group>"; };
 		4A90BA5A2BF09100B282396E /* ScriptDocumentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptDocumentTests.swift; sourceTree = "<group>"; };
 		6A2F61BAA6CD816016B9CC1B /* ScriptIOController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptIOController.swift; sourceTree = "<group>"; };
 		7D11829A42B3A39FEDD53A2F /* ColorExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensionTests.swift; sourceTree = "<group>"; };
 		967BD79343A63EF19B572ABE /* PromptSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptSettingsView.swift; sourceTree = "<group>"; };
 		9A13A101EEDFD3C4A8D4D3A8 /* OpenCueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenCueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C92471B5D26BC2362DD5556 /* DisplayManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayManagerTests.swift; sourceTree = "<group>"; };
 		A4260ECD9AD0C414B6F2920D /* PrompterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrompterView.swift; sourceTree = "<group>"; };
 		BF8EDCB8616963343F48ADD5 /* OpenCue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C166872DCF7B30A24488D949 /* PlaybackEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackEngineTests.swift; sourceTree = "<group>"; };
+		DA41E2FEEFCEBAE25388A889 /* ScriptIOControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptIOControllerTests.swift; sourceTree = "<group>"; };
 		DFD66A5A849B30ED07DEEF83 /* ScriptLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptLibraryView.swift; sourceTree = "<group>"; };
 		E0DED68C1B6F53D20B77A013 /* ScriptEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptEditorView.swift; sourceTree = "<group>"; };
 		E65398CA5C5D6BE708497B68 /* OpenCueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenCueApp.swift; sourceTree = "<group>"; };
@@ -82,8 +90,12 @@
 			children = (
 				7D11829A42B3A39FEDD53A2F /* ColorExtensionTests.swift */,
 				F60C769268B888869FD9AA8F /* CueStorageTests.swift */,
+				9C92471B5D26BC2362DD5556 /* DisplayManagerTests.swift */,
+				4A3C5973DE86C418A7C99977 /* ExternalWindowControllerTests.swift */,
+				1BF02CB1BD0E8567B3D93CFA /* FloatingWindowControllerTests.swift */,
 				C166872DCF7B30A24488D949 /* PlaybackEngineTests.swift */,
 				4A90BA5A2BF09100B282396E /* ScriptDocumentTests.swift */,
+				DA41E2FEEFCEBAE25388A889 /* ScriptIOControllerTests.swift */,
 			);
 			path = OpenCueTests;
 			sourceTree = "<group>";
@@ -319,8 +331,12 @@
 			files = (
 				A3F8E856BCF426BB81E3049A /* ColorExtensionTests.swift in Sources */,
 				076E33D78DE683DF597B2080 /* CueStorageTests.swift in Sources */,
+				1EE10C87FB514BEDCC618071 /* DisplayManagerTests.swift in Sources */,
+				58A9A847DABDF6DA28EB4EEF /* ExternalWindowControllerTests.swift in Sources */,
+				403EC3FC3B95E822AFF7ED06 /* FloatingWindowControllerTests.swift in Sources */,
 				E7A66A184316C93A46B222D9 /* PlaybackEngineTests.swift in Sources */,
 				A2AA4C9C770C75FB6903DB69 /* ScriptDocumentTests.swift in Sources */,
+				DF96121BB929BE9CAD2945FA /* ScriptIOControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,10 +1,39 @@
 import Foundation
 import AppKit
+import UniformTypeIdentifiers
+
+protocol OpenPanelProtocol {
+    var allowedContentTypes: [UTType] { get set }
+    var allowsMultipleSelection: Bool { get set }
+    var canChooseDirectories: Bool { get set }
+    var canCreateDirectories: Bool { get set }
+    var url: URL? { get }
+    func begin(completionHandler handler: @escaping (NSApplication.ModalResponse) -> Void)
+}
+
+extension NSOpenPanel: OpenPanelProtocol {}
+
+protocol SavePanelProtocol {
+    var allowedContentTypes: [UTType] { get set }
+    var nameFieldStringValue: String { get set }
+    var url: URL? { get }
+    func begin(completionHandler handler: @escaping (NSApplication.ModalResponse) -> Void)
+}
+
+extension NSSavePanel: SavePanelProtocol {}
 
 struct ScriptIOController {
     
+    #if DEBUG
+    static var openPanelFactory: () -> OpenPanelProtocol = { NSOpenPanel() }
+    static var savePanelFactory: () -> SavePanelProtocol = { NSSavePanel() }
+    #else
+    private static let openPanelFactory: () -> OpenPanelProtocol = { NSOpenPanel() }
+    private static let savePanelFactory: () -> SavePanelProtocol = { NSSavePanel() }
+    #endif
+    
     static func importScript(completion: @escaping (ScriptDocument?) -> Void) {
-        let panel = NSOpenPanel()
+        var panel = openPanelFactory()
         panel.allowedContentTypes = [.plainText, .init(filenameExtension: "md")!]
         panel.allowsMultipleSelection = false
         panel.canChooseDirectories = false
@@ -28,7 +57,7 @@ struct ScriptIOController {
     }
     
     static func exportScript(_ script: ScriptDocument, completion: @escaping (Bool) -> Void) {
-        let panel = NSSavePanel()
+        var panel = savePanelFactory()
         panel.allowedContentTypes = [.init(filenameExtension: "md")!, .plainText]
         panel.nameFieldStringValue = "\(script.title).md"
         
