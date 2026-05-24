@@ -12,6 +12,7 @@
 		1EE10C87FB514BEDCC618071 /* DisplayManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C92471B5D26BC2362DD5556 /* DisplayManagerTests.swift */; };
 		268C3C421F728D27791E61BE /* ScriptLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD66A5A849B30ED07DEEF83 /* ScriptLibraryView.swift */; };
 		35D3CEFA79B4065A8C31C53A /* FloatingWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203F46C95651449ED846C473 /* FloatingWindowController.swift */; };
+		3A31442E5D48346B2494A1A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23E48BE869D27A8FE59CC146 /* Assets.xcassets */; };
 		403EC3FC3B95E822AFF7ED06 /* FloatingWindowControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF02CB1BD0E8567B3D93CFA /* FloatingWindowControllerTests.swift */; };
 		4157DF882917022E721A7BAA /* PlaybackEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BAEE6CDB763871FD497688 /* PlaybackEngine.swift */; };
 		58A9A847DABDF6DA28EB4EEF /* ExternalWindowControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3C5973DE86C418A7C99977 /* ExternalWindowControllerTests.swift */; };
@@ -46,6 +47,7 @@
 		1BF02CB1BD0E8567B3D93CFA /* FloatingWindowControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingWindowControllerTests.swift; sourceTree = "<group>"; };
 		1F4CD7196889899F19F5DC16 /* OperatorControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorControlsView.swift; sourceTree = "<group>"; };
 		203F46C95651449ED846C473 /* FloatingWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingWindowController.swift; sourceTree = "<group>"; };
+		23E48BE869D27A8FE59CC146 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3198A2BF122B6D4671AB167A /* CueStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueStorage.swift; sourceTree = "<group>"; };
 		379E7FBD6253AD80E20F3D86 /* ScriptDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptDocument.swift; sourceTree = "<group>"; };
 		4A3C5973DE86C418A7C99977 /* ExternalWindowControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalWindowControllerTests.swift; sourceTree = "<group>"; };
@@ -119,6 +121,14 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		35D1CA604546876561230AD6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				23E48BE869D27A8FE59CC146 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		36A8BF8700164DD598612BFA /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +152,7 @@
 				29EFFB8C82908A803B3811B0 /* Core */,
 				833CB7FC4078AFC7D1E6B5E5 /* Features */,
 				88B9D061DF4712667AC097C2 /* Platform */,
+				35D1CA604546876561230AD6 /* Resources */,
 			);
 			path = OpenCue;
 			sourceTree = "<group>";
@@ -258,6 +269,7 @@
 			buildConfigurationList = EE9C56770EC9C83D88FFC86A /* Build configuration list for PBXNativeTarget "OpenCue" */;
 			buildPhases = (
 				67300F7FD86B0876F776446D /* Sources */,
+				3BB5D62A22EC765CE8AB61ED /* Resources */,
 			);
 			buildRules = (
 			);
@@ -304,6 +316,17 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3BB5D62A22EC765CE8AB61ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A31442E5D48346B2494A1A9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		67300F7FD86B0876F776446D /* Sources */ = {
@@ -475,7 +498,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 3;
@@ -489,7 +511,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mtaden.macos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.opencue.OpenCue;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -517,7 +539,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 3;
@@ -531,7 +552,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mtaden.macos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.opencue.OpenCue;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};

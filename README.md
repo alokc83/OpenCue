@@ -1,4 +1,7 @@
-# OpenCue
+<div align="center">
+  <img src="OpenCue/Resources/Assets.xcassets/AppIcon.appiconset/icon.png" width="150" alt="OpenCue Icon">
+  <h1>OpenCue</h1>
+</div>
 
 **OpenCue** is a clean, reliable, and privacy-first native macOS teleprompter designed for creators, presenters, podcasters, and streamers. 
 
