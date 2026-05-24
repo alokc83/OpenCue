@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="OpenCue/Resources/Assets.xcassets/AppIcon.appiconset/icon.png" width="150" alt="OpenCue Icon">
+  <img src="OpenCue/Resources/Assets.xcassets/AppIcon.appiconset/Icon-1024.png" width="150" alt="OpenCue Icon">
   <h1>OpenCue</h1>
 </div>
 
