@@ -23,15 +23,17 @@ struct ScriptLibraryView: View {
                         }) {
                             Label("Duplicate", systemImage: "doc.on.doc")
                         }
-                        
+                        .accessibilityIdentifier("DuplicateContextMenu")
+
                         Button(action: {
                             ScriptIOController.exportScript(script) { _ in }
                         }) {
                             Label("Export...", systemImage: "square.and.arrow.up")
                         }
-                        
+                        .accessibilityIdentifier("ExportContextMenu")
+
                         Divider()
-                        
+
                         Button(role: .destructive) {
                             storage.deleteScript(script)
                             if selectedScriptID == script.id {
@@ -40,20 +42,21 @@ struct ScriptLibraryView: View {
                         } label: {
                             Label("Delete", systemImage: "trash")
                         }
+                        .accessibilityIdentifier("DeleteContextMenu")
                     }
                 }
             }
             .navigationTitle("Scripts")
             .toolbar {
-                ToolbarItem(placement: .primaryAction) {
-                    HStack {
-                        Button(action: importScript) {
-                            Label("Import", systemImage: "square.and.arrow.down")
-                        }
-                        Button(action: createNewScript) {
-                            Label("New Script", systemImage: "plus")
-                        }
+                ToolbarItemGroup(placement: .primaryAction) {
+                    Button(action: importScript) {
+                        Label("Import", systemImage: "square.and.arrow.down")
                     }
+                    .accessibilityIdentifier("ImportScriptButton")
+                    Button(action: createNewScript) {
+                        Label("New Script", systemImage: "plus")
+                    }
+                    .accessibilityIdentifier("NewScriptButton")
                 }
             }
         } detail: {

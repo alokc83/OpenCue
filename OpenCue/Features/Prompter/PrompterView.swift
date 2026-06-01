@@ -52,13 +52,15 @@ struct PrompterView: View {
                         }
                         .buttonStyle(.plain)
                         .padding()
-                        
+                        .accessibilityIdentifier("PrompterRestartButton")
+
                         Button(action: { engine.rewind() }) {
                             Image(systemName: "backward.end.fill")
                         }
                         .buttonStyle(.plain)
                         .padding()
-                        
+                        .accessibilityIdentifier("PrompterRewindButton")
+
                         Button(action: { engine.togglePlayPause() }) {
                             Image(systemName: engine.isPlaying || engine.countdown > 0 ? "pause.circle.fill" : "play.circle.fill")
                                 .resizable()
@@ -66,13 +68,15 @@ struct PrompterView: View {
                         }
                         .buttonStyle(.plain)
                         .padding()
-                        
+                        .accessibilityIdentifier("PrompterPlayPauseButton")
+
                         VStack {
                             Text(String(format: "%.1fx", engine.speedMultiplier))
                                 .font(.caption)
                                 .foregroundColor(.white)
                             Slider(value: $engine.speedMultiplier, in: 0.1...5.0, step: 0.1)
                                 .frame(width: 100)
+                                .accessibilityIdentifier("PrompterSpeedSlider")
                         }
                         .padding()
                     }

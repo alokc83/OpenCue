@@ -4,10 +4,13 @@ import SwiftUI
 @MainActor
 class FloatingWindowController: NSObject, NSWindowDelegate {
     static let shared = FloatingWindowController()
-    
+
     private var window: NSPanel?
-    
+    private var engine: PlaybackEngine?
+
     func showPrompter(for script: ScriptDocument) {
+        engine?.stopEngine()
+
         if window == nil {
             let panel = NSPanel(
                 contentRect: NSRect(x: 0, y: 0, width: 800, height: 600),
@@ -15,7 +18,7 @@ class FloatingWindowController: NSObject, NSWindowDelegate {
                 backing: .buffered,
                 defer: false
             )
-            
+
             panel.isFloatingPanel = true
             panel.level = .floating
             panel.collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary]
@@ -23,25 +26,28 @@ class FloatingWindowController: NSObject, NSWindowDelegate {
             panel.titlebarAppearsTransparent = true
             panel.isOpaque = false
             panel.backgroundColor = .clear
-            
+
             panel.standardWindowButton(.closeButton)?.isHidden = false
             panel.standardWindowButton(.miniaturizeButton)?.isHidden = true
             panel.standardWindowButton(.zoomButton)?.isHidden = true
-            
+
             panel.delegate = self
-            
+
             self.window = panel
         }
-        
-        let engine = PlaybackEngine(script: script)
-        let prompterView = PrompterView(engine: engine)
+
+        let newEngine = PlaybackEngine(script: script)
+        self.engine = newEngine
+        let prompterView = PrompterView(engine: newEngine)
         window?.contentView = NSHostingView(rootView: prompterView)
-        
+
         window?.center()
         window?.makeKeyAndOrderFront(nil)
     }
-    
+
     func windowWillClose(_ notification: Notification) {
+        engine?.stopEngine()
+        engine = nil
         window = nil
     }
 }

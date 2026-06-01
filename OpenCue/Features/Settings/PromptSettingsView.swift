@@ -9,45 +9,53 @@ struct PromptSettingsView: View {
                 VStack(alignment: .leading) {
                     Text("Font Size: \(Int(settings.fontSize))")
                     Slider(value: $settings.fontSize, in: 24...144, step: 2)
+                        .accessibilityIdentifier("FontSizeSlider")
                 }
-                
+
                 VStack(alignment: .leading) {
                     Text("Line Height: \(settings.lineHeight, specifier: "%.1f")")
                     Slider(value: $settings.lineHeight, in: 1.0...2.5, step: 0.1)
+                        .accessibilityIdentifier("LineHeightSlider")
                 }
-                
+
                 VStack(alignment: .leading) {
                     Text("Text Width: \(Int(settings.textWidth))")
                     Slider(value: $settings.textWidth, in: 400...1600, step: 50)
+                        .accessibilityIdentifier("TextWidthSlider")
                 }
             }
-            
+
             Divider()
-            
+
             Section(header: Text("Colors").font(.headline)) {
                 ColorPicker("Text Color", selection: Binding(get: {
                     Color(hex: settings.textColorHex)
                 }, set: { color in
                     settings.textColorHex = color.toHex() ?? "#FFFFFF"
                 }))
-                
+                .accessibilityIdentifier("TextColorPicker")
+
                 ColorPicker("Background Color", selection: Binding(get: {
                     Color(hex: settings.backgroundColorHex)
                 }, set: { color in
                     settings.backgroundColorHex = color.toHex() ?? "#000000"
                 }))
-                
+                .accessibilityIdentifier("BgColorPicker")
+
                 VStack(alignment: .leading) {
                     Text("Background Opacity: \(Int(settings.backgroundOpacity * 100))%")
                     Slider(value: $settings.backgroundOpacity, in: 0.0...1.0, step: 0.05)
+                        .accessibilityIdentifier("BgOpacitySlider")
                 }
             }
-            
+
             Divider()
-            
+
             Section(header: Text("Mirroring (Pro Hardware)").font(.headline)) {
                 Toggle("Mirror Horizontal", isOn: $settings.mirrorHorizontal)
+                    .accessibilityIdentifier("MirrorHToggle")
                 Toggle("Mirror Vertical", isOn: $settings.mirrorVertical)
+                    .accessibilityIdentifier("MirrorVToggle")
             }
         }
         .padding()

@@ -32,3 +32,18 @@ targets:
       base:
         SWIFT_VERSION: 5.0
         GENERATE_INFOPLIST_FILE: YES
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: 55A5VSLH99
+  OpenCueUITests:
+    type: bundle.ui-testing
+    platform: macOS
+    sources:
+      - path: OpenCueUITests
+    dependencies:
+      - target: OpenCue
+    settings:
+      base:
+        SWIFT_VERSION: 5.0
+        GENERATE_INFOPLIST_FILE: YES
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: 55A5VSLH99

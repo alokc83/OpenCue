@@ -18,13 +18,15 @@ struct OperatorControlsView: View {
                         .font(.title)
                 }
                 .buttonStyle(.plain)
-                
+                .accessibilityIdentifier("OperatorRestartButton")
+
                 Button(action: { engine.rewind() }) {
                     Image(systemName: "backward.end.fill")
                         .font(.title)
                 }
                 .buttonStyle(.plain)
-                
+                .accessibilityIdentifier("OperatorRewindButton")
+
                 Button(action: { engine.togglePlayPause() }) {
                     Image(systemName: engine.isPlaying || engine.countdown > 0 ? "pause.circle.fill" : "play.circle.fill")
                         .resizable()
@@ -32,20 +34,23 @@ struct OperatorControlsView: View {
                         .foregroundColor(.blue)
                 }
                 .buttonStyle(.plain)
+                .accessibilityIdentifier("OperatorPlayPauseButton")
             }
-            
+
             VStack {
                 Text("Speed Multiplier: \(String(format: "%.1fx", engine.speedMultiplier))")
                 Slider(value: $engine.speedMultiplier, in: 0.1...5.0, step: 0.1)
                     .frame(width: 200)
+                    .accessibilityIdentifier("OperatorSpeedSlider")
             }
-            
+
             Button("Close Prompter") {
                 ExternalWindowController.shared.closeAll()
                 // Send notification to go back to editor
                 NotificationCenter.default.post(name: .closeOperatorView, object: nil)
             }
             .padding(.top, 20)
+            .accessibilityIdentifier("OperatorCloseButton")
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)

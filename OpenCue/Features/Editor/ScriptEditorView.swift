@@ -17,12 +17,14 @@ struct ScriptEditorView: View {
                         .font(.largeTitle)
                         .textFieldStyle(.plain)
                         .padding()
-                    
+                        .accessibilityIdentifier("ScriptTitleField")
+
                     Divider()
-                    
+
                     TextEditor(text: $script.body)
                         .font(.body)
                         .padding()
+                        .accessibilityIdentifier("ScriptBodyEditor")
                 }
                 .onChange(of: script.title) { _ in
                     storage.saveScript(script)
@@ -42,24 +44,28 @@ struct ScriptEditorView: View {
                     Button(action: { showingSettings = true }) {
                         Label("Settings", systemImage: "gearshape")
                     }
+                    .accessibilityIdentifier("SettingsButton")
                     .popover(isPresented: $showingSettings) {
                         PromptSettingsView(settings: $script.settings)
                     }
-                    
+
                     Menu {
                         ForEach(displayManager.availableDisplays.indices, id: \.self) { index in
                             let screen = displayManager.availableDisplays[index]
                             Button("Display \(index + 1)") {
                                 startExternalPrompting(on: screen)
                             }
+                            .accessibilityIdentifier("DisplayButton_\(index)")
                         }
                     } label: {
                         Label("External", systemImage: "display")
                     }
-                    
+                    .accessibilityIdentifier("ExternalMenu")
+
                     Button(action: startPrompting) {
                         Label("Prompt", systemImage: "play.fill")
                     }
+                    .accessibilityIdentifier("PromptButton")
                 }
             }
         }

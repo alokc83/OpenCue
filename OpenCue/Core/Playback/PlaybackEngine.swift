@@ -28,6 +28,18 @@ class PlaybackEngine: ObservableObject {
         }
         countdownTimer?.invalidate()
     }
+
+    func stopEngine() {
+        pause()
+        if let link = displayLink {
+            CVDisplayLinkStop(link)
+            displayLink = nil
+        }
+        if let monitor = eventMonitor {
+            NSEvent.removeMonitor(monitor)
+            eventMonitor = nil
+        }
+    }
     
     private func setupDisplayLink() {
         CVDisplayLinkCreateWithActiveCGDisplays(&displayLink)
