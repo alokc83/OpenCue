@@ -117,6 +117,12 @@ struct PrompterView: View {
                 case 125: // Down Arrow
                     engine.speedMultiplier = max(0.1, engine.speedMultiplier - 0.1)
                     return nil
+                case 124: // Right Arrow — scroll forward
+                    engine.scrollOffset += 50
+                    return nil
+                case 123: // Left Arrow — scroll backward
+                    engine.scrollOffset = max(0, engine.scrollOffset - 50)
+                    return nil
                 default:
                     return event
                 }
