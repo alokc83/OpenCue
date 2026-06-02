@@ -60,3 +60,12 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+# Added by code-review-graph
+.code-review-graph/
+
+# Environment variables
+.env
+
+# Build outputs
+Build/
+*.dmg
