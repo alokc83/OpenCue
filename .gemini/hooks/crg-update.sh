@@ -5,6 +5,6 @@ set -euo pipefail
 
 cat > /dev/null || true
 
-code-review-graph update --skip-flows --repo "/Users/alok/Documents/000_worth_knowing/Code/OpenCue" >/dev/null 2>&1 || true
+code-review-graph update --skip-flows --repo "/Users/alok/.prowl/repos/OpenCue/wk/crg-ep-2" >/dev/null 2>&1 || true
 echo '{"suppressOutput": true}'
 exit 0
