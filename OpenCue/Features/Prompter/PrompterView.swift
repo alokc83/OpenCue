@@ -71,10 +71,10 @@ struct PrompterView: View {
                         .accessibilityIdentifier("PrompterPlayPauseButton")
 
                         VStack {
-                            Text(String(format: "%.1fx", engine.speedMultiplier))
+                            Text(String(format: "%.2fx", engine.speedMultiplier))
                                 .font(.caption)
                                 .foregroundColor(.white)
-                            Slider(value: $engine.speedMultiplier, in: 0.1...5.0, step: 0.1)
+                            Slider(value: $engine.speedMultiplier, in: 0.25...5.0, step: 0.25)
                                 .frame(width: 100)
                                 .accessibilityIdentifier("PrompterSpeedSlider")
                         }
@@ -105,21 +105,21 @@ struct PrompterView: View {
                     // Use the mouse wheel to adjust speed
                     let delta = event.scrollingDeltaY
                     if abs(delta) > 0 {
-                        engine.speedMultiplier = min(5.0, max(0.1, engine.speedMultiplier + (Double(delta) * 0.02)))
+                        engine.speedMultiplier = min(5.0, max(0.25, engine.speedMultiplier + (Double(delta) * 0.05)))
                     }
                     // Return nil to swallow the event so the window doesn't actually scroll
                     return engine.isPlaying ? nil : event
                 }
-                
+
                 switch event.keyCode {
                 case 49: // Space
                     engine.togglePlayPause()
                     return nil
                 case 126: // Up Arrow
-                    engine.speedMultiplier = min(5.0, engine.speedMultiplier + 0.1)
+                    engine.speedMultiplier = min(5.0, engine.speedMultiplier + 0.25)
                     return nil
                 case 125: // Down Arrow
-                    engine.speedMultiplier = max(0.1, engine.speedMultiplier - 0.1)
+                    engine.speedMultiplier = max(0.25, engine.speedMultiplier - 0.25)
                     return nil
                 case 124: // Right Arrow — scroll forward
                     engine.scrollOffset += 50
