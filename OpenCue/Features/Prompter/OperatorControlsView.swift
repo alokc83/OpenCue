@@ -38,8 +38,8 @@ struct OperatorControlsView: View {
             }
 
             VStack {
-                Text("Speed Multiplier: \(String(format: "%.1fx", engine.speedMultiplier))")
-                Slider(value: $engine.speedMultiplier, in: 0.25...5.0, step: 0.25)
+                Text("Speed Multiplier: \(String(format: "%.2fx", engine.speedMultiplier))")
+                Slider(value: $engine.speedMultiplier, in: 0.05...3.0, step: 0.01)
                     .frame(width: 200)
                     .accessibilityIdentifier("OperatorSpeedSlider")
             }

@@ -74,7 +74,7 @@ struct PrompterView: View {
                             Text(String(format: "%.2fx", engine.speedMultiplier))
                                 .font(.caption)
                                 .foregroundColor(.white)
-                            Slider(value: $engine.speedMultiplier, in: 0.25...5.0, step: 0.25)
+                            Slider(value: $engine.speedMultiplier, in: 0.05...3.0, step: 0.01)
                                 .frame(width: 100)
                                 .accessibilityIdentifier("PrompterSpeedSlider")
                         }
@@ -102,10 +102,10 @@ struct PrompterView: View {
         .onAppear {
             engine.eventMonitor = NSEvent.addLocalMonitorForEvents(matching: [.keyDown, .scrollWheel]) { event in
                 if event.type == .scrollWheel {
-                    // Use the mouse wheel to adjust speed
                     let delta = event.scrollingDeltaY
                     if abs(delta) > 0 {
-                        engine.speedMultiplier = min(5.0, max(0.25, engine.speedMultiplier + (Double(delta) * 0.05)))
+                        let direction: Double = delta > 0 ? 1 : -1
+                        engine.speedMultiplier = min(3.0, max(0.05, engine.speedMultiplier + direction * 0.01))
                     }
                     // Return nil to swallow the event so the window doesn't actually scroll
                     return engine.isPlaying ? nil : event
@@ -116,10 +116,10 @@ struct PrompterView: View {
                     engine.togglePlayPause()
                     return nil
                 case 126: // Up Arrow
-                    engine.speedMultiplier = min(5.0, engine.speedMultiplier + 0.25)
+                    engine.speedMultiplier = min(3.0, engine.speedMultiplier + 0.01)
                     return nil
                 case 125: // Down Arrow
-                    engine.speedMultiplier = max(0.25, engine.speedMultiplier - 0.25)
+                    engine.speedMultiplier = max(0.05, engine.speedMultiplier - 0.01)
                     return nil
                 case 124: // Right Arrow — scroll forward
                     engine.scrollOffset += 50
